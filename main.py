@@ -7,6 +7,7 @@ def create_white_image(width_ratio, height_ratio):
     width = 128 * width_ratio 
 
     image_array = np.zeros((height, width, 3), dtype=np.uint8) * 255 
+    image_array[:, :, 0] = 255
     
     return image_array
 
