@@ -17,3 +17,5 @@ def base64_image_creator(image_array):
 
     return base64_image
 
+def save_image(base64_image):
+    pass
