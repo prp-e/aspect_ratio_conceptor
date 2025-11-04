@@ -12,6 +12,6 @@ def create_white_image(width_ratio, height_ratio):
 
 image_array = create_white_image(1, 1)
 _, encoded_image = cv2.imencode(".jpg", image_array)
-base64_image = base64.b64encode(encoded_image.tobytes())
+base64_image = base64.b64encode(encoded_image.tobytes()).decode("utf-8")
 
 print(base64_image)
