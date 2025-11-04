@@ -8,3 +8,6 @@ def create_white_image(width_ratio, height_ratio):
     image_array = np.ones((width, height, 3), dtype=np.uint8) * 255 
 
     return image_array
+
+image_array = create_white_image(21, 9)
+cv2.imwrite("final_image.jpg", image_array)
