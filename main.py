@@ -9,5 +9,6 @@ def create_white_image(width_ratio, height_ratio):
 
     return image_array
 
-image_array = create_white_image(21, 9)
+image_array = create_white_image(9, 16)
+print(image_array.shape)
 cv2.imwrite("final_image.jpg", image_array)
