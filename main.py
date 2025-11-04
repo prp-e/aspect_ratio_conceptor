@@ -1,4 +1,3 @@
-from PIL import Image
 import cv2
 import numpy as np 
 import base64
@@ -12,5 +11,3 @@ def create_white_image(width_ratio, height_ratio):
     return image_array
 
 image_array = create_white_image(9, 16)
-print(image_array.shape)
-cv2.imwrite("final_image.jpg", image_array)
