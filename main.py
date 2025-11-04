@@ -7,3 +7,6 @@ width = 1024
 image_array = np.ones((width, height, 3), dtype=np.uint8) * 255 
 
 cv2.imwrite("final_image.jpg", image_array)
+
+def create_white_image(width_ratio, height_ratio):
+    pass
