@@ -4,6 +4,7 @@ import numpy as np
 import base64
 
 def create_white_image(width_ratio, height_ratio):
+    '''Creates a blue image to be distinguished easier'''
     height = 128 * height_ratio
     width = 128 * width_ratio 
 
@@ -20,5 +21,7 @@ def base64_image_creator(image_array):
 
 def save_image(base64_image):
     image_binary = base64.b64decode(base64_image)
+    final_name = f'{uuid4()}.jpg'
 
-    return image_binary
+    with open(final_name, 'wb') as img:
+        img.write(image_binary)
