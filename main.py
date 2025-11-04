@@ -1,5 +1,7 @@
+from PIL import Image
 import cv2
 import numpy as np 
+import base64
 
 def create_white_image(width_ratio, height_ratio):
     height = 128 * height_ratio
