@@ -5,9 +5,13 @@ import base64
 
 def create_white_image(width_ratio, height_ratio):
     '''Creates a blue image to be distinguished easier'''
-    height = 64 * height_ratio
-    width = 64 * width_ratio 
-
+    if width_ratio == 1 and height_ratio == 1:
+        height = 64 * height_ratio * 16
+        width = 64 * width_ratio  * 16
+    else:
+        height = 64 * height_ratio 
+        width = 64 * width_ratio  
+        
     image_array = np.zeros((height, width, 3), dtype=np.uint8) * 255 
     image_array[:, :, 0] = 255
     
